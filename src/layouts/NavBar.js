@@ -29,7 +29,9 @@ export const NavBar = () => {
                         })
                     }                 */}
                 
+                    <NavLink to="/addcart">
                     <FontAwesomeIcon icon={faShoppingCart}/>
+                    </NavLink>
             </ul>
         </div>
      

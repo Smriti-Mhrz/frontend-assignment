@@ -95,6 +95,7 @@ export const Homepage = () => {
                 <div className="box">
                   <Product
                     image={productInfo[6]?.image}
+                    onClick={handleProductClick}
                     title={productInfo[6]?.title}
                     desc={productInfo[6]?.description.slice(0,80)}
                     price={productInfo[6]?.price}
@@ -103,6 +104,7 @@ export const Homepage = () => {
                 <div className="box">
                   <Product
                     image={productInfo[2]?.image}
+                    onClick={handleProductClick}
                     title={productInfo[2]?.title}
                     desc={productInfo[2]?.description.slice(0,80)}
                     price={productInfo[2]?.price}
@@ -111,6 +113,7 @@ export const Homepage = () => {
                 <div className="box">
                   <Product
                     image={productInfo[3]?.image}
+                    onClick={handleProductClick}
                     title={productInfo[3]?.title}
                     desc={productInfo[3]?.description.slice(0,80)}
                     price={productInfo[3]?.price}
@@ -119,6 +122,7 @@ export const Homepage = () => {
                 <div className="box">
                   <Product
                     image={productInfo[8]?.image}
+                    onClick={handleProductClick}
                     title={productInfo[8]?.title}
                     desc={productInfo[8]?.description.slice(0,80)}
                     price={productInfo[8]?.price}
@@ -127,6 +131,7 @@ export const Homepage = () => {
                 <div className="box">
                   <Product
                     image={productInfo[15]?.image}
+                    onClick={handleProductClick}
                     title={productInfo[15]?.title}
                     desc={productInfo[15]?.description.slice(0,80)}
                     price={productInfo[15]?.price}
