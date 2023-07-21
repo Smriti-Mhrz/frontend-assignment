@@ -1,0 +1,21 @@
+.service__wrapper{
+    // border: 1px solid black;
+    width: 300px;
+    padding: 24px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin: 24px auto;
+    svg{
+        font-size: 26px;
+    }
+    h5{
+        font-size: 20px;
+        color: $primary-color;
+    }
+    p{
+        font-size: 14px;
+        color: #333;
+    }
+}

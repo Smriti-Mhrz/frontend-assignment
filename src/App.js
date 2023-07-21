@@ -1,12 +1,16 @@
 import './App.scss';
-import { NavBar } from './layouts/index';
+import { Footer, NavBar } from './layouts';
+import { Homepage } from './pages';
 
 function App() {
   return (
-    <div className="container">
+    <>
       <NavBar/>
-
+    <div className="container">
+      <Homepage/>
     </div>
+    <Footer/>
+    </>
   );
 }
 

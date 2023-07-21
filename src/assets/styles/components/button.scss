@@ -1,0 +1,21 @@
+.button{
+    // margin: 10px 12px;
+    button{
+        padding:8px 16px;
+        font-size: 18px;
+        text-transform: uppercase;
+        border-radius: 6px;
+        border: none;
+        background-color: $primary-color;
+        color: $text-color;
+        cursor: pointer;
+        transition: 150ms ease-in;
+
+        &:hover{
+            background-color: $text-color;
+            transition: 150ms ease-in;
+            color: #333;
+            // border: 1px solid #777;
+        }
+    }
+}

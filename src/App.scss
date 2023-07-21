@@ -6,6 +6,21 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+
+}
+html{
+    display: block;
+}
+body{
+    margin: auto;
+    width: fit-content;
+    height: auto;
+    background-color: whitesmoke;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 li, a{
     list-style-type: none;

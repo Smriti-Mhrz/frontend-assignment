@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from "../assets/images/icon.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 export const NavBar = () => {
     const navlist=[
@@ -15,7 +15,7 @@ export const NavBar = () => {
             </div>
             <span>Online Store</span>
         </div>      
-        <div className='navbar-items'>
+        <div className='navbar-items' key='items'>
             <ul>
                 {
                     navlist.map((items)=>{
@@ -31,6 +31,10 @@ export const NavBar = () => {
             <input type="text" placeholder='Search Items.....'/>
             <FontAwesomeIcon icon={faMagnifyingGlass}/>      
         </div>
+        <div className='navbar-cart'>
+            <FontAwesomeIcon icon={faShoppingCart}/>
+        </div>
+
     </div>
   )
 }
