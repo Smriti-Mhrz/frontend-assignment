@@ -10,9 +10,11 @@ import {
   faTruckFast,
 } from "@fortawesome/free-solid-svg-icons";
 import { Product } from "../components/Product";
+import { useNavigate } from "react-router-dom";
 
 export const Homepage = () => {
   const [productInfo, setProductInfo] = useState({});
+  const navigate= useNavigate();
   const productDetailFetching = async () => {
     try {
       const response = await fetch(
@@ -24,6 +26,10 @@ export const Homepage = () => {
       console.log(e);
     }
   };
+
+  const handleProductClick=(e)=>{
+    navigate('/products/SingleProduct/:id');
+  }
   useEffect(() => {
     console.log(productInfo);
     productDetailFetching();
@@ -80,8 +86,9 @@ export const Homepage = () => {
                 <div className="box">
                   <Product
                     image={productInfo[0]?.image}
+                    onClick={handleProductClick}
                     title={productInfo[0]?.title}
-                    desc={productInfo[0]?.description}
+                    desc={productInfo[0]?.description.slice(0,80)}
                     price={productInfo[0]?.price}
                   />
                 </div>
@@ -89,7 +96,7 @@ export const Homepage = () => {
                   <Product
                     image={productInfo[6]?.image}
                     title={productInfo[6]?.title}
-                    desc={productInfo[6]?.description}
+                    desc={productInfo[6]?.description.slice(0,80)}
                     price={productInfo[6]?.price}
                   />
                 </div>
@@ -97,7 +104,7 @@ export const Homepage = () => {
                   <Product
                     image={productInfo[2]?.image}
                     title={productInfo[2]?.title}
-                    desc={productInfo[2]?.description}
+                    desc={productInfo[2]?.description.slice(0,80)}
                     price={productInfo[2]?.price}
                   />
                 </div>
@@ -105,7 +112,7 @@ export const Homepage = () => {
                   <Product
                     image={productInfo[3]?.image}
                     title={productInfo[3]?.title}
-                    desc={productInfo[3]?.description}
+                    desc={productInfo[3]?.description.slice(0,80)}
                     price={productInfo[3]?.price}
                   />
                 </div>
@@ -113,7 +120,7 @@ export const Homepage = () => {
                   <Product
                     image={productInfo[8]?.image}
                     title={productInfo[8]?.title}
-                    desc={productInfo[8]?.description}
+                    desc={productInfo[8]?.description.slice(0,80)}
                     price={productInfo[8]?.price}
                   />
                 </div>
@@ -121,7 +128,7 @@ export const Homepage = () => {
                   <Product
                     image={productInfo[15]?.image}
                     title={productInfo[15]?.title}
-                    desc={productInfo[15]?.description}
+                    desc={productInfo[15]?.description.slice(0,80)}
                     price={productInfo[15]?.price}
                   />
                 </div>

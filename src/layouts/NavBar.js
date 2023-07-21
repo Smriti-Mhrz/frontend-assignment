@@ -1,12 +1,14 @@
 import React from 'react'
 import logo from "../assets/images/icon.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 export const NavBar = () => {
-    const navlist=[
-        "Home", "About", "Products"
-    ]
+    // const navlist=[
+    //     "Home", "About", "Products"
+    // ]
+    
   return (
     <div className='navbar__wrapper'>
         <div className='navbar-logo'>
@@ -17,23 +19,21 @@ export const NavBar = () => {
         </div>      
         <div className='navbar-items' key='items'>
             <ul>
-                {
+                <li><NavLink to="/" className="active">Home</NavLink></li>
+                <li><NavLink to='/products'>Products</NavLink></li>
+                {/* {
                     navlist.map((items)=>{
                         return(
                             <li>{items}</li>
-                        )
-                    })
-                }                
+                            )
+                        })
+                    }                 */}
                 
+                    <FontAwesomeIcon icon={faShoppingCart}/>
             </ul>
         </div>
-        <div className='navbar-search'>
-            <input type="text" placeholder='Search Items.....'/>
-            <FontAwesomeIcon icon={faMagnifyingGlass}/>      
-        </div>
-        <div className='navbar-cart'>
-            <FontAwesomeIcon icon={faShoppingCart}/>
-        </div>
+     
+        
 
     </div>
   )

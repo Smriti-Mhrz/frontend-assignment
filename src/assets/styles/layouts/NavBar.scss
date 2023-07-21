@@ -1,81 +1,61 @@
-.navbar__wrapper{
+.navbar__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  // overflow: hidden;
+  align-items: center;
+  box-shadow: 0 0 2px rgb(1, 14, 32);
+  margin-bottom: 12px;
+
+  .navbar-logo {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    // overflow: hidden;
+    justify-content: center;
     align-items: center;
-    box-shadow: 0 0 2px rgb(1, 14, 32);
-    margin-bottom: 12px;
-    
-    .navbar-logo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
+    gap: 12px;
+    cursor: pointer;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    span {
+      font-size: 26px;
+      font-weight: 500;
+      color: $primary-color;
+    }
+  }
+  .navbar-items {
+    ul {
+      gap: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 24px;
+      li {
+        font-size: 18px;
+        font-style: bold;
         cursor: pointer;
-        img{
-            width: 50px;
-            height: 50px;
+        padding: 5px 10px;
+        color: #333333;
+        font-weight: 500;
+        &:hover {
+          color: $primary-color;
         }
-        span{
-            font-size: 26px;
-            font-weight: 500;
+        a {
+          &:focus {
+            font-weight: bold;
             color: $primary-color;
+          }
         }
+      }
     }
-    .navbar-items{
-        ul{
-            gap: 16px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            li{
-            font-size: 18px;
-            font-style: bold;
-            cursor: pointer;
-            padding: 5px 10px;
-            color: #333333;
-            &:hover{
-                color: $primary-color;
-            }
+  }
 
-        }
-        }
-
+  svg {
+    cursor: pointer;
+    font-size: 28px;
+    // margin: auto 10px;
+    &:hover {
+      color: $primary-color;
     }
-    .navbar-search{
-        
-        input{
-            width: 380px;
-            padding: 8px 24px;
-            position: relative;
-            left: 72px;  
-            &::after{
-                outline: none;
-                border: 1px solid #333;
-            }
-        }
-        svg{
-            position: absolute;
-            // border: 1px solid black;
-            right: 104px;
-            background-color: $primary-color;
-            padding: 7px 24px;
-            font-size: 24px;
-            color: #333333;
-            cursor: pointer;
-        }
-    }
-    .navbar-cart{
-        cursor: pointer;
-        svg{
-        font-size:28px;
-        // margin: auto 10px;
-        &:hover{
-            color: $primary-color;
-        }
-        
-        }
-    }
-
+  }
 }

@@ -1,14 +1,14 @@
 import React from "react";
 import  ReactStars from "react-stars";
 import wallpaper from "../assets/images/wallpaper-two.jpg";
-export const Product = ({image,title,desc,price}) => {
+export const Product = ({image,title,desc,price, onClick}) => {
     const ratingChanged = (newRating) => {
         console.log(newRating)
       }
   return (
     <div className="product__wrapper">
       <div className="product-image">
-        <img src={image} alt="wallpaper" />
+        <img src={image} alt="wallpaper" onClick={onClick}/>
       </div>
       <div className="product-description">
         <h4>{title}</h4>
